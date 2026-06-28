@@ -11,8 +11,6 @@ No install, no cloud. Paste a CIDR, hit Calculate, and get everything you need f
 | Calculator | ![CIDR calculator with subnet details](media/calculator.png) |
 | Split subnet | ![Subnet split into smaller prefixes](media/split.png) |
 
-![SubnetForge calculator](media/calculator.png)
-
 ## What it does
 
 | Feature | Purpose |
