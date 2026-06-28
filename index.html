@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SubnetForge — CIDR & Subnet Calculator</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <div class="logo">
+      <div class="logo-mark">◎</div>
+      <div><h1>SubnetForge</h1><p class="sub">IPv4 CIDR calculator for network engineers</p></div>
+    </div>
+  </div>
+</header>
+<main>
+  <div class="card">
+    <h2>Calculate subnet</h2>
+    <div class="preset" id="presets"></div>
+    <div class="form-row">
+      <label>CIDR</label>
+      <input id="cidr-input" value="10.0.0.0/24" style="flex:1;max-width:200px">
+      <button class="btn btn-primary" id="btn-calc">Calculate</button>
+      <button class="btn btn-secondary" id="btn-split">Split /25</button>
+    </div>
+    <p id="error" class="err" hidden></p>
+  </div>
+  <div class="grid-2">
+    <div class="card">
+      <h2>Subnet details</h2>
+      <table class="result-table" id="results"></table>
+    </div>
+    <div class="card">
+      <h2>Binary view</h2>
+      <pre class="mono" id="binary"></pre>
+      <h2 style="margin-top:1rem">Usable hosts (first 16)</h2>
+      <div class="host-list" id="hosts"></div>
+    </div>
+  </div>
+  <div class="card">
+    <h2>Split subnet</h2>
+    <p style="color:var(--muted);font-size:.88rem;margin-bottom:.75rem">Divide the current network into equal smaller subnets.</p>
+    <div class="form-row">
+      <label>New prefix</label>
+      <select id="split-prefix" style="width:auto"></select>
+      <button class="btn btn-secondary" id="btn-split-go">Split</button>
+    </div>
+    <div id="split-results" class="mono" style="font-size:.82rem;margin-top:.5rem"></div>
+  </div>
+</main>
+<script src="js/app.js"></script>
+</body>
+</html>
